@@ -8,7 +8,7 @@
     tools:context=".adres"
     android:orientation="vertical"
     android:padding="10dp"
-    android:background="@drawable/gradient_background"
+    android:background="?attr/grad_bg"
     android:gravity="center"
     android:id="@+id/ll">
     <LinearLayout
@@ -21,7 +21,7 @@
             android:id="@+id/previousyear"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            app:cardBackgroundColor="@color/deeppurple"
+            app:cardBackgroundColor="?attr/cardcolor"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -41,6 +41,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
+                    android:textColor="?attr/textcolor"
                     android:text="Question Papers"/>
                 <View
                     android:layout_width="match_parent"
@@ -53,7 +54,7 @@
                     android:gravity="center"
                     android:text="Previous Years QPapers"
                     android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"/>
+                    android:textColor="?attr/textcolor"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -61,7 +62,7 @@
             android:id="@+id/tutor"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            app:cardBackgroundColor="@color/deeppurple"
+            app:cardBackgroundColor="?attr/cardcolor"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -81,6 +82,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
+                    android:textColor="?attr/textcolor"
                     android:text="YouTube Tutorials"/>
                 <View
                     android:layout_width="match_parent"
@@ -93,7 +95,7 @@
                     android:gravity="center"
                     android:text="Video Playlists of Core Subjects"
                     android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"/>
+                    android:textColor="?attr/textcolor"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -109,7 +111,7 @@
             android:id="@+id/cgame"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            app:cardBackgroundColor="@color/deeppurple"
+            app:cardBackgroundColor="?attr/cardcolor"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -129,6 +131,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
+                    android:textColor="?attr/textcolor"
                     android:text="HackerRank"/>
                 <View
                     android:layout_width="match_parent"
@@ -141,7 +144,7 @@
                     android:gravity="center"
                     android:text="Coding Challenges for Interviews"
                     android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"/>
+                    android:textColor="?attr/textcolor"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -149,7 +152,7 @@
             android:id="@+id/entrance"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            app:cardBackgroundColor="@color/deeppurple"
+            app:cardBackgroundColor="?attr/cardcolor"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -172,6 +175,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Entrance Exams-PG"
+                    android:textColor="?attr/textcolor"
                     android:textStyle="bold" />
 
                 <View
@@ -186,7 +190,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="Study Materials- GRE,IELTS,TOEFL"
-                    android:textColor="@android:color/darker_gray" />
+                    android:textColor="?attr/textcolor" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

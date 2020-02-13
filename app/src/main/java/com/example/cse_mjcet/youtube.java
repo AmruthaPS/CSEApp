@@ -16,6 +16,12 @@ public class youtube extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle extras = getIntent().getExtras();
+        Boolean mode = extras.getBoolean("dark");
+        if(mode == Boolean.TRUE) {
+            setTheme(R.style.DarkTheme);
+        }
+        else setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube);
 
@@ -34,11 +40,13 @@ public class youtube extends AppCompatActivity {
         arrayList.add("WEB PROGRAMMING");
         arrayList.add("ML TUTORIALS");
         ListView listView = findViewById(R.id.mylist);
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList);
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.listtext, R.id.textView2, arrayList);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                             @Override
                                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                                Bundle extras = getIntent().getExtras();
+                                                Boolean mode = extras.getBoolean("dark");
                                                 String identity = arrayAdapter.getItem(position);
                                                 Intent i;
                                                 i = new Intent(youtube.this, WebActivity.class);
@@ -47,61 +55,73 @@ public class youtube extends AppCompatActivity {
                                                     case "C PROGRAMMING":
                                                         s = "https://www.youtube.com/playlist?list=PLBlnK6fEyqRggZZgYpPMUxdY1CYkZtARR";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "C++ PROGRAMMING":
                                                         s = "https://www.youtube.com/playlist?list=PLfVsf4Bjg79Cu5MYkyJ-u4SyQmMhFeC1C";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "DATA STRUCTURES":
                                                         s = "https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "JAVA":
                                                         s = "https://www.youtube.com/playlist?list=PLWPirh4EWFpFfTUVBl5KbeXly1sHKSc-Z";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "LOGIC AND SWITCHING THEORY":
                                                         s = "https://www.youtube.com/playlist?list=PLBlnK6fEyqRjMH3mWf6kwqiTbT798eAOm";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "DISCRETE MATHEMATICS":
                                                         s = "https://www.youtube.com/playlist?list=PLBlnK6fEyqRhqJPDXcvYlLfXPh37L89g3";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "AUTOMATA LANGUAGES AND COMPUTATION":
                                                         s = "https://www.youtube.com/playlist?list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "OPERATING SYSTEMS":
                                                         s = "https://www.youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "COMPUTER NETWORKS":
                                                         s = "https://www.youtube.com/playlist?list=PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "PYTHON":
                                                         s = "https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "WEB PROGRAMMING":
                                                         s = "https://www.youtube.com/playlist?list=PLwoh6bBAszPrES-EOajos_E9gvRbL27wz";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
                                                     case "ML TUTORIALS":
                                                         s = "https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v";
                                                         i.putExtra("URL", s);
+                                                        i.putExtra("dark",mode);
                                                         startActivity(i);
                                                         break;
 

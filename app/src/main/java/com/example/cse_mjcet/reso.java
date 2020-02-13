@@ -17,6 +17,12 @@ public class reso extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle extras = getIntent().getExtras();
+        Boolean mode = extras.getBoolean("dark");
+        if(mode == Boolean.TRUE) {
+            setTheme(R.style.DarkTheme);
+        }
+        else setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reso);
         /*getActionBar().setTitle("Student Resources");*/
@@ -56,11 +62,13 @@ public class reso extends AppCompatActivity {
 
 
         ListView listView = findViewById(R.id.mylist);
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, arrayList);
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.listtext, R.id.textView2, arrayList);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Bundle extras = getIntent().getExtras();
+                Boolean mode = extras.getBoolean("dark");
                 String identity=arrayAdapter.getItem(position);
                 Intent i;
                 i =new Intent(reso.this,WebActivity.class);
@@ -69,11 +77,13 @@ public class reso extends AppCompatActivity {
                     case "AFREEN SULTANA":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=afreensultana";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "FAHMINA TARNUM":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=ftaranum";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "AHMED":
@@ -85,86 +95,103 @@ public class reso extends AppCompatActivity {
                     case "J. SRINIVAS":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=jsrinivas";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "K. MANMOHAN RAO":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=kmanmohan";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "K.S. NIRAJA":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=ksniraja";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "K. SRIDEVI":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=sridevi";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "KHAJA ZAHOORUDDIN AHMED":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=zahooruddin";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "KRISHNA KEERTHI CHANNAM":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=krishna.keerthi";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MANIZA HIJAB":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=manizahijab";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MANJUSHA KALEKURI":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=manjusha";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MD. SALEEM KHAN":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=saleemkhan";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MD. ZAINUDDIN NAVEED":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=zainuddin";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MIR AHMED ALI":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=mir.ahmedali";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MOHAMMED ABDUL RAHEEM":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=maraheem";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MOHAMMED AHMED":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=mohammed.ahmed";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MOHAMMED MAHMOOD ALI":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=mahmood";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MOHAMMED NAZEER":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=nazeer";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MD. SHABAZ HUSSAIN":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=shabaz";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MD.SHABAZ HUSSAIN":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=shabaz.hussain";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "MOHAMMED SHARFUDDIN":
@@ -175,46 +202,55 @@ public class reso extends AppCompatActivity {
                     case "MOHAMMED UMAR FAROOQ":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=umarfarooq";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "NAIMOONISA BEGUM":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=naimoonisa";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "RAJESHAM GAJULA":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=rajesham.gajula";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "SHOUKAT ALI":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=shoukatali";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "SYED MD AKBAR HASMI":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=akbar.hashmi";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "SYED MOHIUDDIN":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=syed";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "SYED SHABBEER AHMAD":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=shabbeer.ahmad";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "SYED AMBAREEN RANA":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=ambareen.rana";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
                     case "UMA N. DULHARE":
                         s = "http://mjcollege.ac.in/studentresourceslist.php?resourceusername=uma.dulhare";
                         i.putExtra("URL", s);
+                        i.putExtra("dark",mode);
                         startActivity(i);
                         break;
 

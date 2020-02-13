@@ -1,11 +1,33 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <!--Light theme-->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <item name="colorPrimary">#38b26f</item>
+        <item name="colorPrimaryDark">#38b26f</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="grad_bg">@drawable/gradient_background</item>
+        <item name="cardcolor">#96fbc4</item>
+        <item name="textcolor">#000000</item>
+        <item name="main_bg">#f8f6c0</item>
+        <item name="horz_img">@drawable/mjcet1</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
     </style>
 
+    <style name="DarkTheme" parent="Theme.AppCompat.DayNight">
+        <item name="colorPrimary">#2A2438</item>
+        <item name="colorPrimaryDark">#2A2438</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="grad_bg">@drawable/grad_bgdark</item>
+        <item name="cardcolor">#352F44</item>
+        <item name="textcolor">#ffffff</item>
+        <item name="main_bg">#4F4861</item>
+        <item name="horz_img">@drawable/mjdark1</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
 </resources>

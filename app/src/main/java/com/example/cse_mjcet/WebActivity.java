@@ -18,6 +18,12 @@ public class WebActivity extends AppCompatActivity {
     String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle extras = getIntent().getExtras();
+        Boolean mode = extras.getBoolean("dark");
+        if(mode == Boolean.TRUE) {
+            setTheme(R.style.DarkTheme);
+        }
+        else setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_PROGRESS);
         setContentView(R.layout.activity_web);

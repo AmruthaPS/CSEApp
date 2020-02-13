@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient_background"
+    android:background="?attr/grad_bg"
     android:padding="23dp"
     tools:context=".about">
 
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/about_cse_heading"
-        android:textColor="@color/black"
+        android:textColor="?attr/textcolor"
         android:textSize="30sp"
         android:paddingBottom="25dp"
         android:fontFamily="normal"
@@ -26,10 +26,10 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#2C1616"
         android:text="@string/about_cse"
         android:textSize="15sp"
         android:fontFamily="normal"
+        android:textColor="?attr/textcolor"
         android:paddingBottom="9dp"/>
 
     <TextView
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="VISION"
-        android:textColor="@color/black"
+        android:textColor="?attr/textcolor"
         android:textSize="20sp"
         android:fontFamily="normal"
         android:textStyle="italic"
@@ -48,9 +48,9 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#2C1616"
         android:text="To contribute competent computer science professionals to the global talent pool to meet the constantly evolving societal needs.
 "
+        android:textColor="?attr/textcolor"
         android:fontFamily="normal"
         android:textSize="15sp"
         android:paddingBottom="9dp"
@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="MISSION"
-        android:textColor="@color/black"
+        android:textColor="?attr/textcolor"
         android:textSize="20sp"
         android:fontFamily="normal"
         android:textStyle="italic"
@@ -72,7 +72,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#2C1616"
+        android:textColor="?attr/textcolor"
         android:text="@string/mission"
         android:paddingLeft="4dp"
         android:textSize="15sp"
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:text="@string/developers_heading"
         android:textSize="17sp"
-        android:textColor="#000"
+        android:textColor="?attr/textcolor"
         android:textStyle="bold"
 
         />
@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:text="@string/about_the_developers"
         android:textSize="13sp"
-        android:textColor="#000"
+        android:textColor="?attr/textcolor"
         android:paddingBottom="8dp"
 
         />

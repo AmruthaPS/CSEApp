@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ds">
+        <attr name="grad_bg" format="reference"/>
+        <attr name="cardcolor" format="color"/> <!--Apply for faculty background as well-->
+        <attr name="textcolor" format="color"/>
+        <attr name="main_bg" format="color"/> <!--Apply for faculty cards as well-->
+        <attr name="vert_img" format="reference"/>
+        <attr name="horz_img" format="reference"/>
+    </declare-styleable>
+</resources>

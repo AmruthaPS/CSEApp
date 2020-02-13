@@ -11,6 +11,14 @@ public class adres extends AppCompatActivity implements View.OnClickListener {
     private CardView prev,tutorial,game,tests;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle extras = getIntent().getExtras();
+        Boolean mode = extras.getBoolean("dark");
+        if(mode == Boolean.TRUE) {
+            setTheme(R.style.DarkTheme);
+        }
+        else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resources);
         prev= (CardView) findViewById(R.id.previousyear);
@@ -27,23 +35,30 @@ public class adres extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Bundle extras = getIntent().getExtras();
+        Boolean mode = extras.getBoolean("dark");
         Intent i;
         String s;
         switch (v.getId()) {
             case R.id.previousyear : i= new Intent(this,WebActivity.class);
                 s = "http://35.244.45.103:2626/qp/";
                 i.putExtra("URL", s);
+                i.putExtra("dark",mode);
                 startActivity(i);
                 break;
-            case R.id.tutor: i=new Intent(this,youtube.class);startActivity(i); break;
+            case R.id.tutor: i=new Intent(this,youtube.class);
+                i.putExtra("dark",mode);
+                startActivity(i); break;
             case R.id.cgame : i= new Intent(this,WebActivity.class);
                   s = "https://www.hackerrank.com/interview/interview-preparation-kit";
                 i.putExtra("URL", s);
+                i.putExtra("dark",mode);
                 startActivity(i);
                 break;
             case R.id.entrance : i= new Intent(this,WebActivity.class);
                 s = "https://drive.google.com/drive/folders/0B7sWQEWGG8KVcG9sWTdoeHBFTEk";
                 i.putExtra("URL", s);
+                i.putExtra("dark",mode);
                 startActivity(i);
                 break;
             default:break;

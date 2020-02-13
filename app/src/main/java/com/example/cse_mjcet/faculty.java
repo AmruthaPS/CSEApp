@@ -18,6 +18,12 @@ public class faculty extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle extras = getIntent().getExtras();
+        Boolean mode = extras.getBoolean("dark");
+        if(mode == Boolean.TRUE) {
+            setTheme(R.style.DarkTheme);
+        }
+        else setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faculty);
 
